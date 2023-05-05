@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<div class="card-container">
+    <mat-card>
+        <mat-card-title>Login</mat-card-title>
+        <form [formGroup]="loginForm">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="text" formControlName="email" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password" />
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" (click)="navigateToUsersPage()">Login</button>
+    </mat-card>
+</div>
+
+<!--<div><span>Email: </span><input type="text" [(ngModel)]="email" /></div>
+<div><span>Password: </span><input type="password" [(ngModel)]="password" /></div>
+
+<button (click)="navigateToUsersPage()">Login</button>-->

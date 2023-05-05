@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div *ngIf="users && users.length">
+    <h1>User list</h1>
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="username">
+            <th mat-header-cell *matHeaderCellDef>Username</th>
+            <td mat-cell *matCellDef="let row"> {{row.username}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="address">
+            <th mat-header-cell *matHeaderCellDef>Address</th>
+            <td mat-cell *matCellDef="let row"> {{row.address}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <!--<table>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Select</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{ user.username }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.address }}</td>
+            <td><button (click)="openDetails(user)">SELECT</button></td>
+        </tr>
+    </table>-->
+</div>
+
+<button (click)="logout()">Logout</button>
+
+<app-details [user]="chosenUser" (userEmitter)="receiveUser($event)"></app-details>

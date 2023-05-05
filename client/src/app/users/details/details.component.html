@@ -1,0 +1,12 @@
+<!-- <div *ngIf="user">
+    <span>Username: </span><input type="text" [(ngModel)]="user.username" /><br />
+    <span>Name: </span><input type="text" [(ngModel)]="user.name" /><br />
+    <span>Address: </span><input type="text" [(ngModel)]="user.address" /><br />
+</div> -->
+
+<div *ngIf="user">
+    <span>Username: </span><input type="text" [(ngModel)]="user.username" /><br />
+    <span>Name: </span><input type="text" [(ngModel)]="user.name" /><br />
+    <span>Address: </span><input type="text" [(ngModel)]="user.address" /><br />
+    <button (click)="sendBackResult()">SAVE</button>
+</div>

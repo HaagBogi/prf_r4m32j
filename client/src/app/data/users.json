@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "username": "johnm",
+            "name": "John Master",
+            "address": "6720 Szeged, Dugonics tér 13."
+        },
+        {
+            "username": "joem",
+            "name": "Joe Master",
+            "address": "6720 Szeged, Tisza Lajos krt. 100."
+        },
+        {
+            "username": "jankiz",
+            "name": "Zoltán R. Jánki",
+            "address": "6720 Szeged, Somogyi u. 19."
+        }
+    ]
+}
