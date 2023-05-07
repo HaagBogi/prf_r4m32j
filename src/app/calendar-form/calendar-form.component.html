@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="onSubmit()" [formGroup]='calendarForm'>
+            <div class="form-group">
+                <label for="date">Dátum</label>
+                <input class="form-control" formControlName="date" type="datetime-local">
+                <label for="todo">Teendő</label>
+                <input class="form-control" formControlName="todo" type="text">
+            </div>
+            <button [disabled]="!calendarForm.valid" type="submit" class="btn btn-success">Mentés</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col">
+        <h2>Az Ön határidő naplója</h2>
+        <h4>Gyűjtse teendőit egy helyen, online</h4>
+        
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Dátum</th>
+                <th>Teendő</th>
+                <th *ngIf="isAuthenticated">Módosítás</th>
+
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let calendar of calendarEntries; let i = index'>
+                    <td>{{calendar.date}}</td>
+                    <td>{{calendar.todo}}</td>
+                    <td *ngIf="isAuthenticated">
+                        <button class="btn btn-primary" (click)="onEdit(calendar.id)">Szerkesztés</button>   
+                        <button class="btn btn-danger" (click)='onDelete(calendar.id)'>Törlés</button>
+                    </td>
+                </tr>   
+            </tbody>
+        
+        </table>
+
+    </div>
+</div>
