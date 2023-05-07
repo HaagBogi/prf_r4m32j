@@ -29,6 +29,7 @@ export class AuthService{
         
         this.http.post('http://localhost:3000/sign-up/', authData).subscribe(res => {
             console.log(res);
+            this.router.navigate(['/']);
         })
     }
 

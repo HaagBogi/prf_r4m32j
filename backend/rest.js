@@ -86,7 +86,7 @@ app.post('/sign-up', (req,res, next) => {
 
             userModel.save()
             .then(result => {
-                res.status(201).send(result)
+                res.status(201).send({message: 'Successfull sign up'})
             })
             .catch(err => {
                 res.status(500).send(err)
